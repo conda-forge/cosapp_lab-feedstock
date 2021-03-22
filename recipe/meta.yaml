@@ -38,6 +38,7 @@ requirements:
     - tornado >=6.1.0
     - jinja2
     - markdown
+    - cookiecutter
 
 test:
   imports:
