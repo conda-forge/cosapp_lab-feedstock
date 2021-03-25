@@ -11,23 +11,22 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   skip_compile_pyc:
     - '*/utils/templates/*.py'
   entry_points:
     - cosapp = cosapp_lab.main:cosapp
-  script: {{ PYTHON }} -m pip install .  -vvv
 
 requirements:
 
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
     - jupyter-packaging
 
   run:
-    - python >=3.6
+    - python >=3.7
     - cosapp >=0.11
     - ipywidgets >=7.6.3
     - pythonocc-core =7.4.0
