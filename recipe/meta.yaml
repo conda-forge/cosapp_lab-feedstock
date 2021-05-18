@@ -1,17 +1,18 @@
 {% set name = "cosapp_lab" %}
 {% set version = "0.15.3" %}
+{% set pypi_version = "0.15.3-1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1e26f77836101cf733551e1e95e92fa3a265a498b21b45c3433c0ff757cd0966
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ pypi_version }}.tar.gz
+  sha256: a14015aa7a39f833b3f883dfc412309b7f0094d3cc88c161a132f71effa958b4
 
 build:
   noarch: python
-  number: 0
+  number: 1
   skip_compile_pyc:
     - '*/utils/templates/*.py'
   entry_points:
