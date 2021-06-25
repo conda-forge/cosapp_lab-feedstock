@@ -1,6 +1,6 @@
 {% set name = "cosapp_lab" %}
-{% set version = "0.15.3" %}
-{% set pypi_version = "0.15.3-1" %}
+{% set version = "0.15.4" %}
+{% set pypi_version = "0.15.4-1" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ pypi_version }}.tar.gz
-  sha256: a14015aa7a39f833b3f883dfc412309b7f0094d3cc88c161a132f71effa958b4
+  sha256: a4b89e41bfab423d511c8158efd0a65235eb00cc44af781fc97d32f2f4d5e03d
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - python >=3.7
     - cosapp >=0.11.5
     - ipywidgets >=7.6.3
-    - pythonocc-core =7.4.0
+    - pythonocc-core >=7.4
     - click
     - requests
     - jupyter_client >=6.1
@@ -60,5 +60,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - trungle-safran
     - elac-safran
