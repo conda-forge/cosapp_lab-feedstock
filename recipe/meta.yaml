@@ -1,6 +1,6 @@
 {% set name = "cosapp_lab" %}
-{% set version = "0.15.5" %}
-{% set pypi_version = "0.15.5" %}
+{% set version = "0.16.0" %}
+{% set pypi_version = "0.16.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ pypi_version }}.tar.gz
-  sha256: 532b77807774214e835e49b9b7220f9199df0392695636dde748108da08e46af
+  sha256: 2249c0ac6719a71901e63c7ca14ebdcfa3e4eb24632279cc7735fa6d0621c5b7
 
 build:
   noarch: python
@@ -21,15 +21,15 @@ build:
 requirements:
 
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools
     - jupyter-packaging
 
   run:
-    - python >=3.7
-    - cosapp >=0.11.6
-    - ipywidgets >=7.6.3
+    - python >=3.8
+    - cosapp >=0.13
+    - ipywidgets >=7.6.3,<8
     - pythonocc-core >=7.4
     - click
     - requests
