@@ -1,11 +1,11 @@
-About cosapp_lab
-================
+About cosapp_lab-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cosapp_lab-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.com/cosapp/cosapp_lab
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cosapp_lab-feedstock/blob/main/LICENSE.txt)
 
 Summary: Toolbox for managing and deploying CoSApp powered dashboards.
 
