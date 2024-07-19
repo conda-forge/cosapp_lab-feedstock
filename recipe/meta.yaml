@@ -1,6 +1,6 @@
 {% set name = "cosapp_lab" %}
-{% set version = "0.16.0.post1" %}
-{% set pypi_version = "0.16.0-1" %}
+{% set version = "0.17.0" %}
+{% set pypi_version = "0.17.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ pypi_version }}.tar.gz
-  sha256: da3c4e8279f7795a1930ebdd5ba36f7cdc6d27d2c06313faec643fd89048f744
+  sha256: 7f92abfe0322f11551448b5182105252e0d1ce8937d489d07458edd493268e6e
 
 build:
   noarch: python
@@ -23,22 +23,25 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - setuptools
-    - jupyter-packaging
+    - hatchling
+    - jupyterlab >=4,<5
+    - hatch-jupyter-builder
+    - hatch-nodejs-version >=0.3.2
 
   run:
     - python >=3.8
     - cosapp >=0.13
-    - ipywidgets >=7.6.3,<8
-    - pythonocc-core >=7.4
+    - ipywidgets >=8,<9
+    - pythonocc-core >=7.6
     - click
     - requests
-    - jupyter_client >=6.1
-    - jupyter_server >=1.2
+    - jupyter_client >=8
+    - jupyter_server >=2
+    - nb_conda_kernels
     - tornado >=6.1.0
     - jinja2
-    - markdown
     - cookiecutter
+    - markdown
 
 test:
   imports:
