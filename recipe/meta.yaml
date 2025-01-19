@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   skip_compile_pyc:
     - '*/utils/templates/*.py'
   entry_points:
@@ -21,7 +21,7 @@ build:
 requirements:
 
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
     - jupyterlab >=4,<5
@@ -29,7 +29,7 @@ requirements:
     - hatch-nodejs-version >=0.3.2
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cosapp >=0.13
     - ipywidgets >=8,<9
     - pythonocc-core >=7.6
@@ -44,6 +44,8 @@ requirements:
     - markdown
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cosapp_lab
 
